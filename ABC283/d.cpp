@@ -22,7 +22,7 @@ int main(void) {
             if (c == '(') f(f);
             else if (c == ')') {
                 for (char c : ns) {
-                    st.erase(c);
+                    cs.erase(c);
                 }
                 return;
             }

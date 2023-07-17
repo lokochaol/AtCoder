@@ -4,29 +4,27 @@ using namespace std;
 int main(void) {
 	string s;
 	cin >> s;
-	size_t si = 0;
+	stack<string> stk;
+	stk.push("");
 	set<char> cs;
-	bool ok = true;
 
-	auto f = [&](auto f) -> void {
-		string ns = "";
-		while (si < s.size()) {
-			char c = s[si++];
-			if (c == '(') f(f);
-			else if (c == ')') {
-				for(char x : ns) cs.erase(x);
-				return;
-			}
-			else {
-				if (cs.count(c)) ok = false;
-				ns += c;
-				cs.insert(c);
-			}
+	for (char c : s) {
+		if (c == '(') {
+			stk.push("");
 		}
-	};
-
-	f(f);
-	if (ok) cout << "Yes" << '\n';
-	else cout << "No" << '\n';
+		else if (c == ')') {
+			for (char x : stk.top()) cs.erase(x);
+			stk.pop();
+		}
+		else {
+			if (cs.count(c)) {
+				cout << "No" << endl;
+				return 0;
+			}
+			stk.top() += c;
+			cs.insert(c);
+		}
+	}
+	cout << "Yes" << endl;
 	return 0;
 }

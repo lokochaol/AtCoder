@@ -1,15 +1,19 @@
 {
-	"files.associations": {
-		"string": "cpp",
-		"algorithm": "cpp",
-		"vector": "cpp",
-		"iosfwd": "cpp",
-		"iterator": "cpp",
-		"iostream": "cpp",
-		"ratio": "cpp",
-		"map": "cpp",
-		"queue": "cpp",
-		"stack": "cpp"
-	},
-	"C_Cpp.errorSquiggles": "Disabled"
+  "files.associations": {
+    "string": "cpp",
+    "algorithm": "cpp",
+    "vector": "cpp",
+    "iosfwd": "cpp",
+    "iterator": "cpp",
+    "iostream": "cpp",
+    "ratio": "cpp",
+    "map": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "Disabled",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none"
 }
