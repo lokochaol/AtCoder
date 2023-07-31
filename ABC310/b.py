@@ -1,7 +1,7 @@
 # https://atcoder.jp/contests/abc310/tasks/abc310_b
 
 """
-7/17 (月)
+7/17(月)
 """
 
 # N, M = map(int, input().split())
